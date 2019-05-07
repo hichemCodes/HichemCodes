@@ -147,7 +147,7 @@ function add_project(url,title,detail,link){
     mydiv.innerHTML+=output;
   }     
   //add project 
-  add_project('/img/recip1.jpg','Recipe App','HTML CSS3 JS','https://hichemcodes.github.io/Recipe-app/');
+  add_project('img/recip1.jpg','Recipe App','HTML CSS3 JS','https://hichemcodes.github.io/Recipe-app/');
   
   
 
