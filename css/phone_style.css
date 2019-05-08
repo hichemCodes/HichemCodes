@@ -1,0 +1,161 @@
+@media screen and (max-width:768px){
+    html,body{
+        overflow-x:hidden;
+    }
+    nav{height:9.5vh;
+        top:580px;
+        
+    }
+    .link{ 
+        position: absolute;
+        top:8vh;
+        right:0px;
+        display:flex;
+        flex-direction: column;
+        background: #9932CC;
+        height:92vh;/*89.3%;*/
+        width: 100%;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform  0.2s ease-in-out;
+    }
+    
+    .link{
+        padding:0px;
+        margin:0px;
+       
+    }
+    .link li{
+        width:100%;
+        height:25%;
+        line-height: 129px;
+        text-align: center;
+    }
+    .link li a {
+        display: block;
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content:space-around;
+        line-height:142px;
+        
+    }
+    .link li:hover :nth-child(1){
+        background-color:#6b264c;
+    } 
+    .burger{
+        cursor: pointer;
+    }
+    .burger div{
+       width:30px;
+       height:2px;
+       background-color: azure;
+       display: block;
+       margin:5px;
+    }
+     .open_link{
+         transform: translateX(0%);
+     }
+     .toggle .burg1{
+        transform:rotate(-45deg) translate(-5px,5px) ;
+     }
+     .toggle .burg2{
+         transition: all 0.5s ease-in-out;
+       opacity:0;
+     }
+     .toggle .burg3{
+        transform:rotate(45deg) translate(-5px,-5px);
+     }
+     .background,.cover{
+         height:580px;
+     }
+     .content{
+         margin-top:75px;
+     }
+     .content h1{
+        margin-top: 35px;
+    }
+    .information{
+        width:80%;
+    
+    }
+.project{
+  margin-left:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+   
+  margin-bottom: 80px;
+}
+.project_item{
+      width:100%;
+      height: 251px;
+      
+      
+      /* box-shadow: 5px 5px 10px #00000059;
+          /* -5px -5px 10px #00000059;*/
+       
+           
+}
+.about{
+
+    margin-top:177px;
+    margin-bottom: 80px;
+}
+
+  .contact{margin-bottom:-350px;
+}
+  .contact form{
+    width:92%;
+    margin-left:0px;
+
+}
+.name label,.name input,.email label,.email input,#form_line label,#form_line input{
+    display:flex;
+   
+}
+.email_name{
+    display:block;
+    
+    height:140px;
+
+}
+.form_line{
+   
+   width: 90%;
+  
+}
+.name input,.email input{
+    padding-left:25px;
+    width:100%;
+}
+#form_line{
+    width:90%;
+}
+#form_line textarea{
+    width:100%;
+  
+ }
+ .name,.email{
+    width:100%;
+}
+
+label{
+    margin-top: 2px;
+}
+.social_media{
+    width:53%;
+}
+.copyright :first-child{
+    font-size: 0.78rem;
+}
+.totop{
+    width:40px;
+    height:40px;
+}
+.totop i{
+    transform:scale(1.4);
+   
+ }
+}
