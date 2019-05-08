@@ -47,7 +47,7 @@ body{
 
 .background{
     width:100%;
-    height:670px;
+    /*height:670px;*/
     background-image: url('..img/cc.jpg');
     background-size:cover;
     background-attachment: fixed;
@@ -58,7 +58,7 @@ body{
      background-color:rgba(33, 33, 33, 0.68);
       position: absolute;
       top:0vh;
-      height:670px;
+     /* height:670px;*/
       width: 100%;
 
 }

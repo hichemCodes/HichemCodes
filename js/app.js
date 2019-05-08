@@ -1,4 +1,9 @@
 $(document).ready(function(){
+            var width_window=$(window).width();
+            var height_window=$(window).height();
+        $(".background,.cover").css({
+                'height':height_window,
+        });
          ///////  go to top of the page whene click scroll top button
      $("#totop").click(function(){
         $('html,body').animate({ scrollTop: 0 }, 'slow');
@@ -41,31 +46,27 @@ $(document).ready(function(){
            });
               /////////  resize the nav   
            $(window).scroll(function(){
-            var resize='';
-           var origin='';
-           if($(window).width()>768){ ////////for mobile devices 
-               resize=670;
-               origin="670px";
-                  }
-               else{
-                    resize=580;
-                       origin="580px";
-                   }
-             if($(window).scrollTop() >= resize){
-                  $(".nav").css({
-                   'position' : 'fixed',
-                   'top' : '0px',
-                   
-                });
+           
+           const origin=$(".nav").position().top;
+           
+             if($(window).scrollTop() >= origin){
+                $(".nav").css({
+                'position':'fixed',
+                'top':'0px'
+                 
+          });
         }
         else{
-           $(".nav").css({
-               'position' : 'absolute',
-               'top' : origin,
-               
-            });
+           
+          $(".nav").css({
+                'position':'absolute',
+                'top':origin
+                 
+          });
+           
         }
         });
+        
             
           
      });

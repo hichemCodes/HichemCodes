@@ -2,8 +2,8 @@
     html,body{
         overflow-x:hidden;
     }
-    nav{height:9.5vh;
-        top:580px;
+    .nav{height:9.5vh;
+        
         
     }
     .link{ 
@@ -24,6 +24,18 @@
         padding:0px;
         margin:0px;
        
+    }
+    
+    .content h1,.content h2{
+
+        font-size: 36px;
+        margin-bottom: 8px;
+        font-weight: 300;
+    }
+    .content h2{
+        font-size: 24px;
+        margin-top: 8px;
+        margin-bottom: 40px;
     }
     .link li{
         width:100%;
