@@ -101,6 +101,7 @@ body{
 
     font-size: 50px;
     margin-bottom: 8px;
+    margin-top: 20px;
 }
 .content h2{
     font-size: 30px;
@@ -130,106 +131,103 @@ body{
     position:fixed;
     top:10px;
 }
-#project_title{
+#project_title,#text_about,#text_contact{
     font-size: 24px;
     padding-bottom: 5px;
     border-bottom: 3px solid #9932CC;
-    display: inline-flex;
-   /* margin-left: 46.8%;*/
-   margin-left: 50%;
-     transform: translate(-50%, -50%);
-    margin-top: 140px;
+    
+   
+}
+.con_{
+    text-align: center;
+}
+
+#con_project,#con_about,#con_contact{
+    margin-top: 80px;
+    margin-bottom: 77px;
+
 }
 .project{
 
     height: auto;
-    width:80%;
+    width:85.5%;
     margin: auto;
-    margin-top: 60px;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 100px;
-
+   
 }
-@media screen and (min-width:780px){
-.project_item{
-    
-   display: inline-block;
-     left: 0px;
-    margin-bottom: 35px;
-        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-        top:5px;
-    }    
-    .project_item:hover{
-        top:0px;
+.information_task{
+    margin-bottom: 10px;
+}
+
+.information_2 span{
+    display: block;
+    margin-bottom: 5px;
+    font-weight:600;
+    font-size:1rem;
+}
+.information_2{
+      height: 29%;
+      width: 100%;
+      margin-top: 56%;
+      margin-left: 15px;
+      color: #fff;
+}
+.task{
+    display: inline-block;
+    padding: 2px 8px 2px 8px; 
+      font-size: 14px;
+      box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+      
     }
-
+#HTML5,#HTML{
+  background:#e85d25;
+ 
+  
 }
+#CSS,#CSS3{
+  background: #563d7c;
+}
+#JAVASCRIPT{
+    background: #f1e05a;
+}
+
 .project_item{
-    width:335px;/*361px301px;*/
-    height:248px;/*235px;*/
+    width:363px;/*361px301px;*/
+    height:301px;/*235px;*/
         
          position:relative;
         
           background-size: cover;
-          background-repeat:no-repeat;       
+          background-repeat:no-repeat;  
+          box-shadow: 5px 5px 15px 0px #00000030, -5px -5px 15px 0px #00000030;  
+}
+.project_item a{
+    text-decoration: none;
+    color:#fff;
+}
+.container_information{
+    display: none;
+    width:100%;
+    height:100%;
+    background-color: #1b1717d9;
+    transition: .7s ease-in;
+}
+.project_item:hover .container_information{
+    display: flex;
 }
 
-.slide{
-    
-     background-color:#1b171780;
-     transition: .7s ease-in;
-     height: 0%;
-     visibility:hidden;
-      color:#fff;
-}
-.slide .inside{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
- height:40%;
- position: relative;
-     top:71px;
-     z-index: 100;
-}
-.inside h2,.inside h3,.inside a{
-   margin-bottom: 15px;
-} 
-.inside a{
-       display: block;
-       width: 170px;
-       height: 45px;
-       background:transparent;
-       outline:none;
-       border-radius:32px;
-       border:2px solid #9932CC;
-       letter-spacing: 1.2px;
-       transition :all 0.2s ease-in;
-        text-align: center;
-        text-decoration:none;
-        line-height: 45px;
-        color:#fff;
-}
-.inside a:hover{
-  background: #9932CC;
-  color:white;
-}
-.project_item:hover .slide{
-    visibility:visible;
-    height:100%;
-}
 .about{
      width:100%;
      height:auto;
-     margin-bottom: 100px;
      display:flex;
      justify-content:space-around;
      flex-direction: column;
      align-items: center;
-     margin-top:197px;
+   
 }
 .information{
     width:40%;
@@ -240,6 +238,7 @@ body{
 }
 .information h3{
     line-height: 42px;
+    margin-top: 0px;
 
 }
 .information h3 span{
@@ -262,26 +261,15 @@ body{
      border-radius:50%;
 
 }
-#text_about,#text_contact{
-    font-size: 24px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #9932CC;
-    display: inline-flex;
-    position: absolute;
-    left: 50%;
-     transform: translate(-50%, -50%);
-     margin-bottom:150px;
-}
+
 .contact{
 
-    margin-top:475px;
-    margin-bottom:-260px;
+    
     display:flex;
     justify-content:space-between;
     flex-direction:column;
       width:75%;
-      margin-left:50%;
-      transform: translate(-50%, -50%);
+      margin:auto;
       align-items: center;
 
 }

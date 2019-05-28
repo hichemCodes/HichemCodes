@@ -104,17 +104,15 @@
       width:100%;
       height: 251px;  
 }
-.about{
 
-    margin-top:177px;
-    margin-bottom: 80px;
-}
 
-  .contact{margin-bottom:-350px;
+  .contact{
+    width: 92%;
 }
   .contact form{
-    width:92%;
+    width:100%;
     margin-left:0px;
+    position: relative;
 
 }
 .name label,.name input,.email label,.email input,#form_line label,#form_line input{
@@ -128,19 +126,19 @@
 
 }
 .form_line{
-   
-   width: 90%;
+   position: relative;
+   width: 93%;
   
 }
 .name input,.email input{
     padding-left:25px;
-    width:100%;
+    width:98%;
 }
 #form_line{
-    width:90%;
+    width:93%;
 }
 #form_line textarea{
-    width:100%;
+    width:98%;
   
  }
  .name,.email{
@@ -164,4 +162,12 @@ label{
     transform:scale(1.4);
    
  }
+ .contact h2{
+   font-size: 1.1rem;
+   font-weight: 550;
+  }
+  .plus_contact span {
+    margin-top :45px;
+   
+}
 }

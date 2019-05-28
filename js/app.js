@@ -8,7 +8,7 @@ $(document).ready(function(){
      $("#totop").click(function(){
         $('html,body').animate({ scrollTop: 0 }, 'slow');
      });
-            ////////  chang the burger in mobile device and show the navbar 
+            ////////  change the burger in mobile device and show the navbar 
      $(".burger").click(function(){
          $(".link").toggleClass("open_link");
          $(".burger").toggleClass("toggle");
@@ -16,13 +16,18 @@ $(document).ready(function(){
      });
              //////// click button view my prohect in the header cover
              $("#btn").click(function(){
-                $("html,body").animate({scrollTop:680},'slow');
+                $("html,body").animate({scrollTop:$('#project_title').position ().top-70},'slow');
            });
          //////  go to page part with clikc the navbar 
            if($(window).width()<768){
                $(".link").children().click(function(){
                     $(".burger").click();
                });
+
+              var width_form= $('form').width();
+                $('.form_line,#name,#email,#message').css({
+                     'width':width_form-25,
+                })
            }
      $(window).scroll(function(){
               
@@ -36,13 +41,13 @@ $(document).ready(function(){
           $('html,body').animate({ scrollTop:0}, 'slow');
          });
          $("#project").click(function(){  
-            $('html,body').animate({ scrollTop:680}, 'slow');
+            $('html,body').animate({ scrollTop:$('#project_title').position ().top-70}, 'slow');
            });
             $("#about").click(function(){  
-            $('html,body').animate({ scrollTop:1202}, 'slow');
+            $('html,body').animate({ scrollTop:$('#text_about').position ().top-70}, 'slow');
            });
             $("#contactme").click(function(){  
-            $('html,body').animate({ scrollTop:1859}, 'slow');
+            $('html,body').animate({ scrollTop:$('#text_contact').position ().top-70}, 'slow');
            });
               /////////  resize the nav   
            $(window).scroll(function(){
@@ -133,23 +138,40 @@ const app =()=>{
 }
 app();
 //add  project function
-function add_project(url,title,detail,link){
+function add_project(url,title,link,array,info){
     let output=`
           <div class="project_item" style="background-image:url('${url}'")>
-          <div class="slide">
-                <div class="inside">
-                <h2>${title}</h2>
-                <h4>${detail}</h4>
-                <a href="${link}">Visit website</a>
-                       </div>
-      </div>
+    <a href='${link}'>        
+        <div class='container_information'>
+        <div class='information_2'>
+        <div class='information_task'>
+               
+         </div>
+         <span >${title}</span>
+         <span>${info}</span>
+     </div>
+        </div>  
+           
+  </a>      
   </div>`;
     let mydiv=document.querySelector(".project");
     mydiv.innerHTML+=output;
+    array.forEach((element) => {
+         
+          let task= `
+         
+           <div class='task' id="${element}">
+                   ${element}
+           </div>
+          `;
+          document.querySelector(".information_task").innerHTML+=task;
+
+    });
   }     
   //add project 
-  add_project('img/recip1.jpg','Recipe App','HTML CSS3 JS','https://hichemcodes.github.io/Recipe-app/');
-  
-  
+     let array=['HTML5','CSS3','JAVASCRIPT'];
+  add_project('img/capture.png','Movies search app','https://hichemcodes.github.io/Moviesearch/',array,'by hichem  /  may 5,2019');
 
+
+ 
 
