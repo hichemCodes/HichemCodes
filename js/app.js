@@ -5,7 +5,7 @@ $(document).ready(function(){
                 'height':height_window,
         });
          ///////  go to top of the page whene click scroll top button
-     $("#totop").click(function(){
+     $("#totop,.logo h2").click(function(){
         $('html,body').animate({ scrollTop: 0 }, 'slow');
      });
             ////////  change the burger in mobile device and show the navbar 
@@ -140,7 +140,8 @@ app();
 //add  project function
 function add_project(url,title,link,array,info){
     let output=`
-          <div class="project_item" style="background-image:url('${url}'")>
+          <div class="project_item" >
+          <img src="${url}" alt="" class="cc">
     <a href='${link}'>        
         <div class='container_information'>
         <div class='information_2'>
@@ -170,7 +171,7 @@ function add_project(url,title,link,array,info){
   }     
   //add project 
      let array=['HTML5','CSS3','JAVASCRIPT'];
-  add_project('img/capture.png','Movies search app','https://hichemcodes.github.io/Moviesearch/',array,'by hichem  /  may 5,2019');
+  add_project('img/capture1.png','Movies search app','https://hichemcodes.github.io/Moviesearch/',array,'by hichem  /  may 5,2019');
 
 
  

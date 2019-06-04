@@ -3,14 +3,40 @@ body{
     margin:0px;
     box-sizing: border-box;
     background-color:#fff;
-
+   
     font-family: 'Montserrat';
+    width: 100vw;
+  overflow-x: hidden;
 }
+body::-webkit-scrollbar{
+      width: 0.9rem;
+      background: transparent;
+      display: none;
+
+}
+body::-webkit-scrollbar-track{
+    background-color:;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(39, 100, 142, 0.85);
+ 
+ 
+}
+body::-webkit-scrollbar-track-piece:start {
+    background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;
+}
+
+body::-webkit-scrollbar-track-piece:end {
+    background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;
+}
+
+
+
 .nav{
     display:flex;
     justify-content:space-around;
     align-items: center;
-    background-color:#9932CC;
+    background-color:#27648e;
     height:8vh;
     font-family: 'Montserrat';
     color:white;
@@ -19,7 +45,13 @@ body{
     left: 0;
     right: 0;
      z-index: 100;
+     
+     background-color: rgba(39, 100, 142, 0.85);
+    border-color: #080808;
 
+}
+.logo h2{
+      cursor: pointer;
 }
 
 .new_pos{
@@ -65,14 +97,18 @@ body{
       top:0vh;
       
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
 }
 .content{
       width:100%;
-      height:360px;
-      margin-top:12%;
+      height:auto;
+     
      text-align: center;
      color:white;
+     
 
 }
 .finder{
@@ -80,15 +116,15 @@ body{
     height:160px;
     border-radius: 50%;
     margin: auto;
-    margin-top: 50px;
+    
     animation:myanimation 1.5s infinite ease-out;
     border:8px solid transparent;
-}/*#9932cc57/#9932ccb3/*/
+}/*#27648e57/#27648eb3/*/
 @keyframes myanimation{
     from {border:8px solid transparent;
     }
     to{
-        border:8px solid #9932CC;
+        border:8px solid #27648e;
     }
 }
 .finder img{
@@ -101,7 +137,7 @@ body{
 
     font-size: 50px;
     margin-bottom: 8px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .content h2{
     font-size: 30px;
@@ -123,8 +159,8 @@ body{
     transition: all 0.1s ease-in;
 }
 #btn:hover{
-          background: #9932CC;
-          border-color: #9932CC;
+          background: #27648e;
+          border-color: #27648e;
 }
 .display_nav{
 
@@ -134,7 +170,7 @@ body{
 #project_title,#text_about,#text_contact{
     font-size: 24px;
     padding-bottom: 5px;
-    border-bottom: 3px solid #9932CC;
+    border-bottom: 3px solid #27648e;
     
    
 }
@@ -143,8 +179,8 @@ body{
 }
 
 #con_project,#con_about,#con_contact{
-    margin-top: 80px;
-    margin-bottom: 77px;
+    margin-top: 60px;
+    margin-bottom: 57px;
 
 }
 .project{
@@ -188,6 +224,10 @@ body{
  
   
 }
+.cc{
+    width:100%;
+    height:100%;
+}
 #CSS,#CSS3{
   background: #563d7c;
 }
@@ -204,10 +244,12 @@ body{
           background-size: cover;
           background-repeat:no-repeat;  
           box-shadow: 5px 5px 15px 0px #00000030, -5px -5px 15px 0px #00000030;  
+          position: relative;
 }
 .project_item a{
     text-decoration: none;
     color:#fff;
+   
 }
 .container_information{
     display: none;
@@ -215,6 +257,9 @@ body{
     height:100%;
     background-color: #1b1717d9;
     transition: .7s ease-in;
+    position: absolute;
+    top:0px;
+    left: 0px;
 }
 .project_item:hover .container_information{
     display: flex;
@@ -236,9 +281,11 @@ body{
 .information h1{
     text-align: center;
 }
-.information h3{
+.information span{
     line-height: 42px;
     margin-top: 0px;
+    font-size: 1.17em;
+    font-weight: 600;
 
 }
 .information h3 span{
@@ -250,7 +297,7 @@ body{
 .about .img{
     width: 204px;
     height: 204px;
-    border:8px double #9932CC;
+    border:8px double #27648e;
     border-radius: 50%;
     margin-bottom: 20px;
 
@@ -263,8 +310,6 @@ body{
 }
 
 .contact{
-
-    
     display:flex;
     justify-content:space-between;
     flex-direction:column;
@@ -273,9 +318,10 @@ body{
       align-items: center;
 
 }
-.contact h2{
+.contact span{
   text-align: center;
   margin-bottom: 50px;
+  font-size: 1.5em;
 }
 .contact form{
     width:75%;
@@ -307,7 +353,7 @@ label{
     width:91%;
 }
 input,textarea{
-    border :1px solid #9932CC;
+    border :1px solid #27648e;
     border-radius:4px;
       outline:none;
          font-family: 'Montserrat';
@@ -316,7 +362,7 @@ input,textarea{
 #send{
       width:198px;
       height:47px;
-      border:2px solid #9932CC;
+      border:2px solid #27648e;
       transition:all 0.1s ease-in-out;
         background:transparent;
         border-radius:25px;
@@ -329,7 +375,7 @@ input,textarea{
         font-family: 'Montserrat';
 }
 #send:hover{
-    background-color:#9932CC;
+    background-color:#27648e;
     color:#fff;
 }
 #form_line textarea{
@@ -376,7 +422,7 @@ input,textarea{
 }
 footer{
     height:10vh;
-    background-color: #9932CC;
+    background-color: #27648e;
     margin:0px;
     padding:18px 0px 10px ;
 }
@@ -421,11 +467,13 @@ footer{
     position: fixed;
     right:10px;
     bottom:10px;
-    border-radius:8px;
-    background-color: #9932CC;
+    background-color: rgba(39, 100, 142, 0.85);
     display: flex;
     justify-content: space-around;
     cursor: pointer;
+}
+.totop:hover{
+    background: #007bb6;
 }
 .totop i{
    transform:scale(1.8);
