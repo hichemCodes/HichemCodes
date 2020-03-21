@@ -3,11 +3,18 @@
      --dark_bleu:#141c3a;
 }
 
-.grad_color{
-     background: linear-gradient(to right, #2c3e50, #2980b9);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+body::-webkit-scrollbar{
+      width:8px;
 }
+body::-webkit-scrollbar-track{
+      background: rgba(255, 255, 255, 0.945);
+}
+body::-webkit-scrollbar-thumb{
+     
+     background: var(--c_blue);
+}
+
+
 
 body{
     margin:0px;
@@ -16,6 +23,11 @@ body{
     font-family: Poppins,sans-serif;
     position: relative;
 
+}
+.grad_color{
+     background: linear-gradient(to right, #2c3e50, #2980b9);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
 }
 .first_screen{
       width:100%;
@@ -205,12 +217,14 @@ padding-bottom: 30vh;
       width:40%;
 }
 .fotter_information{
-     height:60vh;
+     height:70vh;
      width:100%;
      background: #2980b9;  
      background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  
      background: linear-gradient(to right, #2c3e50, #2980b9); 
-     padding-top:4vh;
+     padding-top:13vh;
+     padding-bottom: 20px;
+     box-sizing: border-box;
      
 }
 .start_title{
@@ -257,4 +271,101 @@ padding-bottom: 30vh;
      font-weight: bold;
      letter-spacing: 1.2px;
 
+}
+.social_media{
+      width:22%;
+height:16.5vh;
+}
+.social_media a{
+     text-decoration: none;
+     width:47px;
+     height:47px;
+     border-radius:50%;
+     border:2px solid #ffffff4d;
+     text-align: center;
+     transition:all .2s ease-in;
+     color:#fff;
+}
+.social_media a i{
+    font-size: 1.4rem;
+   
+}
+.social_media a:hover{
+     background: #fff;
+     
+
+}
+.social_media a:hover  i{
+
+    color: var(--c_blue);
+    animation: rotate .5s ease-in-out;
+     
+
+}
+@keyframes rotate{
+      0%{
+            transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(180deg);
+    }
+    100%{
+     transform: rotate(360deg);
+}
+}
+.foter_register{
+     color:#fff;
+     font-size:1.07rem;
+}
+.bolder{
+     font-weight: bold;
+}
+.foter_register span i{
+      margin:0px 1.2px 0px 1.2px;
+      font-size:1.1rem ;
+      
+}
+
+.cover{
+     position:fixed;
+     top:0px;
+     left:0px;
+     width:100%;
+     height:100%;
+     background: #fff;
+     z-index: 1000;
+     display: none;
+  
+     padding-top:19.5vh;
+
+}
+.show_cover{
+       display: flex;
+}
+
+.nav .fa-times{
+      font-size:1.6rem;
+      color: var(--c_blue);
+      cursor:pointer;
+}
+.reach-out{
+     text-align: center;
+     font-size: 2rem;
+     
+}
+.all_def{
+      animation:frombottom .8s ease-in-out;
+}
+
+@keyframes frombottom{
+     0%{
+          position: absolute;
+          top:100vh;
+    }
+    50%{
+        top:50vh;
+  }
+  100%{
+   top:19.5vh;
+}
 }
