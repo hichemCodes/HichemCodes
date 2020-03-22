@@ -327,22 +327,28 @@ height:16.5vh;
 }
 
 .cover{
-     position:fixed;
+     position: fixed;;
      top:0px;
      left:0px;
      width:100%;
-     height:100%;
+     min-height:100%;
      background: #fff;
      z-index: 1000;
      display: none;
   
-     padding-top:19.5vh;
+     padding-top:14.2vh
 
+}
+.cover .nav{
+      height:16vh;
 }
 .show_cover{
        display: flex;
 }
-
+.stop_scroll{
+      width: 100%;
+      overflow: hidden;
+}
 .nav .fa-times{
       font-size:1.6rem;
       color: var(--c_blue);
@@ -350,8 +356,67 @@ height:16.5vh;
 }
 .reach-out{
      text-align: center;
-     font-size: 2rem;
+     font-size: 2.5rem;
+     margin-bottom: 35px;
      
+}
+.form_contact{
+     width:74%;
+
+}
+.form_contact .l_item
+{
+      width:100%;
+      margin-bottom: 20px;
+}
+.form_contact .l_item .item{
+     width:47.5%;
+}
+.form_contact input{
+     height: 7.5vh;
+    
+   
+    
+
+}
+.item label,.l_item label{
+      margin-bottom: 7px;
+      color:#8a8989;
+      font-size: 1.14rem;
+      letter-spacing: 1.15px;
+      cursor:pointer;
+}
+#name,#email,#msg{
+      border:1px solid #cfd9ecbf;
+      border-radius:5px;
+      outline:none;
+      padding-left: 15px;
+      box-sizing: border-box;
+      font-size: 1.1rem;
+      width:100%;
+}
+#msg{
+     padding-top: 15px;
+}
+#send{
+     background:transparent;
+      font-size: 1.17rem;
+      margin-top: 10px;
+      letter-spacing: 1.25px;
+      text-align: center;
+      padding:13px 50px 13px 50px;
+      border:2px solid var(--c_blue);
+      transition: all .26s ease-in;
+      color:var(--c_blue);
+      border-radius: 22px;
+      cursor: pointer;
+      outline: none;
+      font-weight: 600;
+
+}
+#send:hover{
+     color:#fff;
+     background: var(--c_blue);
 }
 .all_def{
       animation:frombottom .8s ease-in-out;
