@@ -1,0 +1,86 @@
+@media only screen and (max-width:600px)
+{
+    body{
+         overflow-x: hidden;
+    }
+    .first_screen{
+        justify-content: space-evenly;
+    }
+    .nav .say_hello{
+         display: none;
+    }
+    .description{
+         margin-top: -5vh;
+    }
+   
+    .logo a{
+         font-size: 1.4rem;
+    }
+    .title_bold{
+         font-size: 1.45rem;
+         text-align: center;
+         letter-spacing: 1.15px;
+    }
+    .title_small{
+         font-size: 0.95rem;
+         text-align: center;
+    }
+    .avatar{
+        width:170px;
+        height:170px;
+    }
+    .skills {
+         flex-direction: column;
+         margin-bottom: 80px;
+    }
+    .skill{
+         padding-top:53px;
+         padding-bottom: 0px;
+         justify-content: start;
+    }
+    .ui{
+     padding-top:75px;
+    }
+    .mob{
+        padding-bottom: 55px;
+    }
+    .work_title{
+         margin-bottom: 53px;
+    }
+    .all_project{
+          flex-direction: column;
+    }
+    .all_project div{
+          width:100%;
+          
+    }
+    .start_project{
+          width:92%;
+          flex-direction: column;
+          justify-content: center;
+          padding:35px 0px 30px 0px;
+          box-sizing: content-box;
+
+    }
+    .start_project .item{
+          width:100%;
+          justify-content: center;
+    }
+    .start_project .item{
+         text-align: center;
+    }
+    .item .say_hello
+    {
+          margin-top: 4.5vh;
+          padding: 8px 25px 8px 25px;
+    }
+    .quates_s,.quates{
+     width:92%;
+    }
+    .social_media{
+          width:65%;
+          margin-top:10px;
+
+    }
+    
+}
