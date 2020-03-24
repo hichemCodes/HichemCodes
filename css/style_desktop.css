@@ -57,6 +57,12 @@ body{
     position: absolute;
     top:0px;
 }
+.burger_menu{
+     display: none;
+}
+.pop_down{
+     display: none;
+}
 .say_hello{
      padding: 9px 17px 9px 17px;
      
@@ -170,6 +176,7 @@ padding-bottom: 30vh;
      border-left: 1.4px solid #E6ECF8;
      border-right: 1.4px solid #E6ECF8;
 }
+
 .skill_title{
       color: var(--dark_bleu);
       font-weight: 600;

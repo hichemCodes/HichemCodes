@@ -1,42 +1,209 @@
+:root{
+     --c_blue:#2980b9;
+     --dark_bleu:#141c3a;
+}
+
 @media only screen and (max-width:600px)
 {
     body{
          overflow-x: hidden;
     }
     .first_screen{
-        justify-content: space-evenly;
+        justify-content: space-between;
+        box-sizing: border-box;
     }
-    .nav .say_hello{
-         display: none;
+    .nav,.cover .nav{
+         position: relative;
+         height: 14vh;
     }
+    .nav .burger_menu{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width:38px;
+          height:38px;
+          -webkit-box-shadow: 0px 2px 27px -6px rgba(184,184,184,.75);
+          -moz-box-shadow: 0px 2px 27px -6px rgba(184,184,184,.75);
+          box-shadow: 0px 2px 27px -6px rgba(184,184,184,.75);
+          border-radius: 50%;
+          transition: transform .2s ease-in;
+          cursor: pointer;
+
+    }
+    .nav .burger_menu:hover{
+         transform: scale(1.12);
+    }
+
+    .pop_down{
+     
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     top:12vh;
+
+     height: 0vh;
+     overflow: hidden;
+     z-index: 1000;
+     
+     left:0px;
+     width:100%;
+     
+     
+}
+.animate_burger{
+     
+     border-bottom: 1.4px solid #d1d5da;
+     animation: fromtop_burger .5s ease-in;
+     height: 20vh;
+}
+.remove_animate{
+
+     animation: hide_from_bottom .5s ease-in;
+     height: 0vh;
+}
+@keyframes fromtop_burger{
+      0%{
+               height: 0vh;
+      }
+      50%{
+           height: 10vh;
+      }
+      100%{
+           height: 20vh;
+      }
+}
+@keyframes hide_from_bottom{
+
+     0%{
+         height: 20vh;
+     }
+     50%{
+           height: 10vh;
+     }
+     100%{
+           height:0vh;
+     }
+}
+
+.nav .say_hello{
+     display: none;
+}
+.pop_down .say_hello
+{
+      display: block;
+     
+      padding: 6px 12px 6px 12px;
+      font-size: 1rem;
+
+}
+    
+    
+    .grad_bg{
+     background: #2980b9;  
+     background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  
+     background: linear-gradient(to right, #2c3e50, #2980b9); 
+     
+     }
+    .burger_menu div{
+          width:20px;
+          height: 2px;
+          transition: transform .4s ease-in;
+          background: var(--c_blue);
+          opacity: 1;
+         
+
+    }
+    .burger_menu{
+          position: relative;
+    }
+    .burger1_animate{
+
+         transform: rotate(-51deg);
+         
+    }
+    .burger2_animate
+    {
+          visibility: hidden;
+          
+          transition: visibility 0.4s  ease-in-out !important;
+
+    }
+    .burger3_animate
+    {
+     transform: rotate(51deg);
+     
+    }
+    .burger1_animate,.burger3_animate{
+     position: absolute;
+     top:18px;
+    }
+    .burger1_animate,.burger2_animate,.burger3_animate
+    {
+     height: 3px !important;
+    }
+    .burger:nth-child(even)
+    {
+     margin:4px 0px 4px 0px;
+     
+    }
+    
     .description{
-         margin-top: -5vh;
+         margin-top: 5vh;
+         height: 35vh;
+
     }
    
     .logo a{
-         font-size: 1.4rem;
+         font-size: 1.35rem;
     }
     .title_bold{
-         font-size: 1.45rem;
+         font-size: 1.3rem;
          text-align: center;
          letter-spacing: 1.15px;
     }
     .title_small{
-         font-size: 0.95rem;
+         font-size: 0.85rem;
          text-align: center;
+         margin-top: 0.96rem;
     }
     .avatar{
-        width:170px;
-        height:170px;
+         position: relative;
+        width:160px;
+        height:160px;
+        margin-top: 0px;
+    }
+    .about_me{
+          height: 70vh;
+    }
+    .about_title{
+          text-align: center;
+          font-size: 1.3rem;
+          line-height: 25px;
     }
     .skills {
          flex-direction: column;
-         margin-bottom: 80px;
+         margin-bottom: 53px;
+         width:85%;
+         -webkit-box-shadow: 4px 4px 15px 0 #2425261c;
+         border: 1.1px solid #d1d5da;
+
     }
     .skill{
          padding-top:53px;
          padding-bottom: 0px;
          justify-content: start;
+         flex-grow: unset;
+         flex-basis: unset;
+         height: auto;
+    }
+    .skill:nth-child(even){
+          border-left:none;
+          border-right: none;
+    }
+    .skill span{
+         height: auto;
     }
     .ui{
      padding-top:75px;
@@ -44,22 +211,32 @@
     .mob{
         padding-bottom: 55px;
     }
+    .works{
+          width:85%;
+    }
     .work_title{
          margin-bottom: 53px;
     }
     .all_project{
           flex-direction: column;
+          margin-bottom: 60px;
     }
     .all_project div{
           width:100%;
-          
+          height: 230px;
+          margin-bottom: 25px;
+    }
+    .fotter_information{
+         height:80vh;
     }
     .start_project{
           width:92%;
           flex-direction: column;
           justify-content: center;
-          padding:35px 0px 30px 0px;
+          padding:35px 0px 35px 0px;
           box-sizing: content-box;
+          -webkit-box-shadow: 4px 4px 15px 0 #2425261c;
+          border: 1.1px solid #d1d5da;
 
     }
     .start_project .item{
@@ -77,10 +254,64 @@
     .quates_s,.quates{
      width:92%;
     }
+    .quates_s{
+         margin:8px 0px 10px 0px;
+         justify-content: center;
+         align-items: center;
+    }
+    .quates_s i{
+          font-size: 2rem;
+    }
+    .auteur{
+     margin:6px 0px 6px 0px;
+    }
     .social_media{
           width:65%;
-          margin-top:10px;
+          margin-top:8px;
 
     }
-    
+    .foter_register{
+          font-size: 0.8rem;
+    }
+    .rights{
+     margin:6px 0px 8px 0px;
+    }
+    .cover{
+          padding: 0px;
+    }
+    .nav .fa-times{
+          font-size: 1.2rem;
+    }
+    .reach-out{
+          font-size: 1.05rem;
+          margin: 15px 0px 15px 0px;
+    }
+
+    .form_contact {
+     width: 90%;
+ }
+    .column_mob{
+         flex-direction: column;
+    }
+    .form_contact .l_item .item {
+     width: 100%;
+ }
+ .item{
+      margin-bottom: 9px;
+ }
+ .form_contact .l_item{
+      margin-bottom: 0px;
+ }
+ .cover .nav{
+      height:10vh;
+ }
+ .cover .nav .logo a {
+     font-size: 1.2rem;
+ }
+ #send{
+     padding: 10px 40px 10px 40px;
+ }
+ #name, #email, #msg{
+     border-bottom: 1px solid #d1d5da;
+ }
 }
